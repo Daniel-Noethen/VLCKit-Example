@@ -41,6 +41,9 @@ class PlayerViewModel: ObservableObject {
         }
     }
     @Published var durationString: String = ""
+    @Published var sliderPosition: Double = 0.0
+    @Published var isEditingSlider = false
+    
     private(set) var controlButtonTitle: String
     var controlIconName: String {
         isPlaying ? "pause" : "play"
@@ -102,11 +105,16 @@ class PlayerViewModel: ObservableObject {
         let media = VLCMedia(url: track.filePath)
         mediaPlayer.media = media
     }
+    
+    func seekToCurrentTime() {
+        mediaPlayer.time = VLCTime(int: Int32(sliderPosition * 1000));
+    }
 
     // MARK: - Observers
 
     func setupObservers() {
-        observeRemainingTime()
+        //observeRemainingTime()
+        observeTimeElapsed()
     }
 
     func cancelObservers() {
@@ -119,6 +127,9 @@ class PlayerViewModel: ObservableObject {
             .sink { remainingTime in
                 if let remainingTime, let _ = remainingTime.value {
                     self.durationString = remainingTime.stringValue
+                    if self.isEditingSlider == false {
+                        self.sliderPosition = Double(self.mediaPlayer.time.intValue/1000)
+                    }
                 }
             }
             .store(in: &cancellable)
@@ -128,7 +139,10 @@ class PlayerViewModel: ObservableObject {
         mediaPlayer
             .publisher(for: \.time, options: [.new])
             .sink { time in
-                print("Time: \(time)")
+                self.durationString = time.stringValue
+                if self.isEditingSlider == false {
+                    self.sliderPosition = Double(self.mediaPlayer.time.intValue/1000)
+                }
             }
             .store(in: &cancellable)
     }

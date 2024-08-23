@@ -28,7 +28,7 @@ struct ContentView: View {
             Spacer()
             PlayerView(
                 viewModel: PlayerViewModel(
-                    track: Track(filePath: AudioTracks.sampleFilePath1)
+                    track: Track(filePath: AudioTracks.remoteSampleFileURL)
                 )
             )
         }

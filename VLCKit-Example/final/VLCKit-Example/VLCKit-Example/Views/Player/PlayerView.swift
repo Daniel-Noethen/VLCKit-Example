@@ -14,10 +14,18 @@ struct PlayerView: View {
         VStack {
             DurationView(duration: viewModel.durationString)
                 .padding(.bottom)
-            Button {
-                viewModel.togglePlayerState()
-            } label: {
-                HStack {
+            
+            // Slider for tracking the current playback position
+            Slider(value: $viewModel.sliderPosition, in: 0...Double(viewModel.duration), onEditingChanged: { editing in
+                            viewModel.isEditingSlider = editing
+                            if !editing {
+                                viewModel.seekToCurrentTime()
+                            }
+                        })
+                        .padding(.vertical)
+            
+            Button { viewModel.togglePlayerState()
+            } label: { HStack {
                     Image(systemName: viewModel.controlIconName)
                         .padding(.trailing, 4)
                     Text(viewModel.controlButtonTitle)
@@ -34,7 +42,7 @@ struct PlayerView: View {
 
 struct PlayerView_Previews: PreviewProvider {
     static var previews: some View {
-        let sampleTrack = Track(filePath: AudioTracks.sampleFilePath1)
+        let sampleTrack = Track(filePath: AudioTracks.remoteSampleFileURL)
         PlayerView(
             viewModel: PlayerViewModel(track: sampleTrack)
         )

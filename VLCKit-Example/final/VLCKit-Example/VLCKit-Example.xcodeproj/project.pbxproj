@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CDA712B2C7878F60023AF43 /* ehren-paper_lights-96.opus in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA712A2C7878F60023AF43 /* ehren-paper_lights-96.opus */; };
+		3CDA712D2C787AA10023AF43 /* jordan.opus in Resources */ = {isa = PBXBuildFile; fileRef = 3CDA712C2C787AA10023AF43 /* jordan.opus */; };
 		95735E5616850DEABB944578 /* Pods_VLCKit_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7164163797258E59F7E97C99 /* Pods_VLCKit_Example.framework */; };
 		F80FF2A428D87AE500C10E54 /* VLCKit_ExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80FF2A328D87AE500C10E54 /* VLCKit_ExampleApp.swift */; };
 		F80FF2A628D87AE500C10E54 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80FF2A528D87AE500C10E54 /* ContentView.swift */; };
@@ -41,6 +43,8 @@
 
 /* Begin PBXFileReference section */
 		2194C949097933E4AF6240F1 /* Pods-VLCKit-Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VLCKit-Example.release.xcconfig"; path = "Target Support Files/Pods-VLCKit-Example/Pods-VLCKit-Example.release.xcconfig"; sourceTree = "<group>"; };
+		3CDA712A2C7878F60023AF43 /* ehren-paper_lights-96.opus */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ehren-paper_lights-96.opus"; sourceTree = "<group>"; };
+		3CDA712C2C787AA10023AF43 /* jordan.opus */ = {isa = PBXFileReference; lastKnownFileType = file; path = jordan.opus; sourceTree = "<group>"; };
 		7164163797258E59F7E97C99 /* Pods_VLCKit_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VLCKit_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61DAFFF28FFB45AA85B521A /* Pods-VLCKit-Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VLCKit-Example.debug.xcconfig"; path = "Target Support Files/Pods-VLCKit-Example/Pods-VLCKit-Example.debug.xcconfig"; sourceTree = "<group>"; };
 		F80FF2A028D87AE500C10E54 /* VLCKit-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VLCKit-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -212,6 +216,8 @@
 		F80FF2BF28D89F2200C10E54 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				3CDA712C2C787AA10023AF43 /* jordan.opus */,
+				3CDA712A2C7878F60023AF43 /* ehren-paper_lights-96.opus */,
 				F80FF2C128D89F3D00C10E54 /* audio_sample.ogg */,
 				F80FF2C028D89F3500C10E54 /* sample_ogg_file.ogg */,
 			);
@@ -289,6 +295,8 @@
 				F80FF2AB28D87AE500C10E54 /* Preview Assets.xcassets in Resources */,
 				F80FF2A828D87AE500C10E54 /* Assets.xcassets in Resources */,
 				F80FF2C528D8A23D00C10E54 /* audio_sample.ogg in Resources */,
+				3CDA712B2C7878F60023AF43 /* ehren-paper_lights-96.opus in Resources */,
+				3CDA712D2C787AA10023AF43 /* jordan.opus in Resources */,
 				F80FF2C628D8A23F00C10E54 /* sample_ogg_file.ogg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +486,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VLCKit-Example/Preview Content\"";
+				DEVELOPMENT_TEAM = HA7C97NQBT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -507,6 +516,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"VLCKit-Example/Preview Content\"";
+				DEVELOPMENT_TEAM = HA7C97NQBT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

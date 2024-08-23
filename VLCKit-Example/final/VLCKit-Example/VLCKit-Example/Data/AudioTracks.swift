@@ -10,7 +10,7 @@ import Foundation
 enum AudioTracks {
 
     static var sampleFilePath1: URL {
-        return Bundle.main.url(forResource: "audio_sample", withExtension: ".ogg")!
+        return Bundle.main.url(forResource: "jordan", withExtension: ".opus")!
     }
 
     static var sampleFilePath2: URL {
@@ -18,7 +18,7 @@ enum AudioTracks {
     }
 
     static var remoteSampleFileURL: URL {
-        return URL(string: "https://upload.wikimedia.org/wikipedia/commons/c/c8/Example.ogg")!
+        return URL(string: "https://static.subj.am/rec/dumpfiles/sj/Jordan07/20240818005419_3108cb5a-277d-429b-a74f-34f3c3f0119e_Jordan07.opus")!
     }
 }
 
